@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InstallerOS</title>
+    <link rel="shortcut icon" href="/assets/logo-CT7O8t8R.png" />
+    <script
+      src="https://kit.fontawesome.com/37a8a30840.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" crossorigin src="/assets/index-DiALqIAc.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C52XyOCd.css">
+  </head>
+  <body class="min-h-dvh bg-gray-900 text-white">
+    <!-- HEADER -->
+    <header
+      class="bg-blue-950 h-20 relative md:static flex justify-between items-center px-6 border-b-2 border-b-black"
+    >
+      <div class="flex gap-4 items-center">
+        <img
+          src="/assets/logo-CT7O8t8R.png"
+          alt="logo"
+          class="size-16 rounded-2xl"
+        />
+        <h1 class="font-bold text-2xl">InstallerOS</h1>
+      </div>
+      <button class="md:hidden cursor-pointer" onclick="openSideBar()">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+      <nav
+        class="bg-semitransparent backdrop-blur-sm md:bg-transparent h-screen md:h-0 min-w-60 max-w-full md:flex md:items-center fixed top-0 -right-full md:static z-10 py-4 border-l-2 border-l-black md:border-none transition-all duration-300 ease-in-out"
+        id="menu"
+      >
+        <ul class="w-[90%] md:w-full flex flex-col md:flex-row gap-6 py-4">
+          <li class="liflex">
+            <button class="md:hidden cursor-pointer" onclick="closeSideBar()">
+              <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+          </li>
+          <li class="liflex">
+            <a href="#" class="hover:text-blue-500 transition"
+              >Pagina Principal</a
+            >
+          </li>
+          <li class="liflex">
+            <a
+              href="src/pages/service.html"
+              class="hover:text-blue-500 transition"
+              >Servicios</a
+            >
+          </li>
+          <li class="liflex">
+            <a
+              href="src/pages/contact.html"
+              class="hover:text-blue-500 transition"
+              >Contacto</a
+            >
+          </li>
+          <li class="liflex">
+            <a
+              href="src/pages/about.html"
+              class="hover:text-blue-500 transition"
+              >Acerca de</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div
+        id="overlay"
+        class="bg-gray-900 opacity-30 fixed inset-0 z-0 hidden"
+        onclick="closeSideBar()"
+      ></div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- HEADER MAIN CONTENT -->
+      <section>
+        <header>
+          <div class="flex flex-col justify-center items-center relative">
+            <img
+              src="/assets/banner-A1p2ENiE.png"
+              alt="banner"
+              class="brightness-50 w-full"
+            />
+            <h2
+              class="absolute bottom-[40%] sm:bottom-[50%] text-xl sm:text-2xl text-center font-bold reveal-btitle"
+            >
+              Instalacion de Sistemas Operativos y Personalizacion
+            </h2>
+            <p
+              class="absolute bottom-[15%] sm:bottom-[40%] text-center text-xs font-medium reveal-bparagraph"
+            >
+              Tu sistema operativo, listo para rendir al máximo.
+            </p>
+          </div>
+        </header>
+
+        <h2
+          class="text-center m-4 text-xl md:text-3xl font-medium reveal-title"
+        >
+          ¿Que es InstallerOS?
+        </h2>
+
+        <!-- BANNER CONTENT -->
+        <article
+          class="flex justify-center items-center w-[95%] my-4 bg-gray-950 border rounded-2xl border-black mx-auto imageReveal"
+        >
+          <div
+            class="flex flex-col md:flex-row items-center justify-center w-full p-4 border-gray-800 border-2 rounded-2xl shadow-customize"
+          >
+            <img
+              src="/assets/logo-CT7O8t8R.png"
+              alt="img-banner"
+              class="h-32 md:h-60 pl-2 rounded-2xl"
+            />
+            <p class="text-xs md:text-lg p-6">
+              <strong>InstallerOS</strong> es un emprendimiento sobre
+              informatica que tiene el proposito de ofrecer diferentes servicios
+              con respecto a los Sistemas Operativos y diferentes
+              funcionalidades o detalles que pueden mejorar el rendimiento de tu
+              computador o la estetica de tu escritorio. <br /><br />
+              En este sitio encontraras diferentes servicios que pueden
+              satisfacer sus necesidades como consumidor de informatica. Puedes
+              encontrar mas en el apartado de Servicios en el menu o en
+              <a
+                href="src/pages/service.html"
+                class="underline hover:text-blue-600 transition-all"
+                >Este Link</a
+              >
+            </p>
+          </div>
+        </article>
+
+        <!-- CARDS -->
+        <article class="p-4">
+          <h2 class="text-center mb-8 text-xl md:text-3xl font-medium autoShow">
+            Garantizamos el mejor servicio para el usuario
+          </h2>
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 items-center justify-items-center gap-4 w-full"
+          >
+            <div
+              class="max-h-90 p-6 flex items-center justify-center bg-gray-950 rounded-2xl flex-col border-gray-800 border-2 imageReveal"
+            >
+              <i class="fa-regular fa-envelope text-7xl"></i>
+              <h3 class="text-lg font-medium">Envio de correos</h3>
+              <p class="p-2 text-center text-sm">
+                Si estas interesado en alguno de nuestros sistemas operativos,
+                puedes enviarnos un correo de solicitud de servicio para
+                nosotros recibir tu necesidad y poder ayudarte.
+              </p>
+            </div>
+            <div
+              class="max-h-90 p-6 flex items-center justify-center bg-gray-950 rounded-2xl flex-col border-gray-800 border-2 imageReveal"
+            >
+              <i class="fa-solid fa-users text-7xl"></i>
+              <h3 class="text-lg font-medium">Personal Activo</h3>
+              <p class="p-2 text-center text-sm">
+                Si necesitas asistencia nuestro equipo puede ayudarte en
+                resolucion de problemas, guias paso a paso y mantenimiento -
+                actualizacion de sistemas puedes contactar con ellos 24/7.
+              </p>
+            </div>
+            <div
+              class="max-h-90 p-6 flex items-center justify-center bg-gray-950 rounded-2xl flex-col border-gray-800 border-2 imageReveal"
+            >
+              <i class="fa-solid fa-laptop text-7xl"></i>
+              <h3 class="text-lg font-medium">Disponibilidad</h3>
+              <p class="p-2 text-center text-sm">
+                Si tienes miedo de que tu dispositivo no sea compatible con
+                alguno de estos sistemas puedes quedarte tranquilo,
+                <strong>InstallerOS</strong> te ofrece sistemas funcionales en
+                cualquier dispositivo.
+              </p>
+            </div>
+          </div>
+        </article>
+        <footer
+          class="bg-gray-950 rounded-2xl m-4 p-5 flex items-center justify-between flex-col sm:flex-row border-gray-800 border-2 gap-2 imageReveal"
+        >
+          <div>
+            <h2
+              class="font-bold text-xl md:text-2xl py-2 text-center sm:text-left"
+            >
+              Contrata tu servicio ahora!
+            </h2>
+            <p class="text-sm py-2">
+              Contrata el servicio de <strong>InstallerOS</strong> enviandonos
+              tu correo con tu solicitud.
+            </p>
+          </div>
+          <a
+            href="src/pages/contact.html"
+            class="py-2 px-4 bg-blue-600 rounded-2xl hover:text-black"
+            >Contratar</a
+          >
+        </footer>
+      </section>
+    </main>
+
+    <footer class="p-4 bg-gray-950 text-gray-500 text-center">
+      <h2 class="text-center text-2xl font-medium p-2">InstallerOS</h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 justify-items-center gap-4 md:gap-2 md:py-8"
+      >
+        <a href="#" class="hover:text-white transition-all">Volver Arriba</a>
+        <a href="src/pages/service.html" class="hover:text-white transition-all"
+          >Servicios</a
+        >
+        <a href="src/pages/contact.html" class="hover:text-white transition-all"
+          >Contacto</a
+        >
+        <a href="src/pages/about.html" class="hover:text-white transition-all"
+          >Acerca de</a
+        >
+      </div>
+      <p class="p-2">
+        <small> &copy; InstallerOS - Todos los derechos reservados 2025 </small>
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
