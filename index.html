@@ -14,7 +14,7 @@
   <body class="min-h-dvh bg-gray-900 text-white">
     <!-- HEADER -->
     <header
-      class="bg-blue-950 h-20 relative md:static flex justify-between items-center px-6 border-b-2 border-b-black"
+      class="bg-blue-950 h-20 flex justify-center items-center border-b-2 border-b-black gap-6"
     >
       <div class="flex gap-4 items-center">
         <img
@@ -24,46 +24,6 @@
         />
         <h1 class="font-bold text-2xl">InstallerOS</h1>
       </div>
-      <button class="md:hidden cursor-pointer" onclick="openSideBar()">
-        <i class="fa-solid fa-bars text-2xl"></i>
-      </button>
-      <nav
-        class="bg-semitransparent backdrop-blur-sm md:bg-transparent h-screen md:h-0 min-w-60 max-w-full md:flex md:items-center fixed top-0 -right-full md:static z-10 py-4 border-l-2 border-l-black md:border-none transition-all duration-300 ease-in-out"
-        id="menu"
-      >
-        <ul class="w-[90%] md:w-full flex flex-col md:flex-row gap-6 py-4">
-          <li class="liflex">
-            <button class="md:hidden cursor-pointer" onclick="closeSideBar()">
-              <i class="fa-solid fa-xmark text-2xl"></i>
-            </button>
-          </li>
-          <li class="liflex">
-            <a href="#" class="hover:text-blue-500 transition"
-              >Pagina Principal</a
-            >
-          </li>
-          <li class="liflex">
-            <a href="service.html" class="hover:text-blue-500 transition"
-              >Servicios</a
-            >
-          </li>
-          <li class="liflex">
-            <a href="contact.html" class="hover:text-blue-500 transition"
-              >Contacto</a
-            >
-          </li>
-          <li class="liflex">
-            <a href="about.html" class="hover:text-blue-500 transition"
-              >Acerca de</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <div
-        id="overlay"
-        class="bg-gray-900 opacity-30 fixed inset-0 z-0 hidden"
-        onclick="closeSideBar()"
-      ></div>
     </header>
 
     <!-- MAIN CONTENT -->
@@ -170,26 +130,6 @@
             </div>
           </div>
         </article>
-        <footer
-          class="bg-gray-950 rounded-2xl m-4 p-5 flex items-center justify-between flex-col sm:flex-row border-gray-800 border-2 gap-2 imageReveal"
-        >
-          <div>
-            <h2
-              class="font-bold text-xl md:text-2xl py-2 text-center sm:text-left"
-            >
-              Contrata tu servicio ahora!
-            </h2>
-            <p class="text-sm py-2">
-              Contrata el servicio de <strong>InstallerOS</strong> enviandonos
-              tu correo con tu solicitud.
-            </p>
-          </div>
-          <a
-            href="src/pages/contact.html"
-            class="py-2 px-4 bg-blue-600 rounded-2xl hover:text-black"
-            >Contratar</a
-          >
-        </footer>
       </section>
       <section>
         <header>
@@ -353,45 +293,199 @@
             </div>
           </div>
         </article>
-        <footer
-          class="bg-gray-950 rounded-2xl m-4 p-5 flex items-center justify-between flex-col sm:flex-row border-gray-800 border-2 gap-2 imageReveal"
-        >
-          <div>
+      </section>
+      <section>
+        <header>
+          <div class="flex flex-col justify-center items-center relative">
+            <img
+              src="../../assets/images/banner-contact.webp"
+              alt="banner"
+              class="brightness-50 w-full"
+            />
             <h2
-              class="font-bold text-xl md:text-2xl py-2 text-center sm:text-left"
+              class="absolute bottom-[50%] sm:bottom-[50%] text-xl sm:text-2xl text-center font-bold reveal-btitle"
             >
-              Contrata tu servicio ahora!
+              Contacto
             </h2>
-            <p class="text-sm py-2">
-              Contrata el servicio de <strong>InstallerOS</strong> enviandonos
-              tu correo con tu solicitud.
+            <p
+              class="absolute bottom-[30%] sm:bottom-[40%] text-center text-xs font-medium reveal-bparagraph"
+            >
+              Comunicate con nosotros para ayudarte en lo que necesites.
             </p>
           </div>
-          <a
-            href="src/pages/contact.html"
-            class="py-2 px-4 bg-blue-600 rounded-2xl hover:text-black"
-            >Contratar</a
+        </header>
+        <article>
+          <h2
+            class="text-center m-2 my-6 text-xl md:text-3xl font-medium reveal-title"
           >
-        </footer>
+            Formulario de Solicitud
+          </h2>
+
+          <div class="px-8 mb-6">
+            <form
+              id="form"
+              class="bg-gray-950 text-gray-300 flex flex-col items-center p-4 border-gray-800 border-2 rounded-2xl sm:w-full"
+            >
+              <fieldset class="border-2 px-6 w-full">
+                <legend class="text-xl px-2 pb-2">Solicitud de servicio</legend>
+                <div class="mb-2">
+                  <label for="title" class="text-lg md:text-2xl"
+                    >Servicio a contratar:</label
+                  >
+                  <br />
+                  <select
+                    name="title"
+                    id="title"
+                    class="min-w-full h-8 md:h-12 px-4 md:pl-4 text-sm border-2 border-gray-300 rounded-xl"
+                  >
+                    <option disabled selected>Seleccione un servicio</option>
+                    <option value="Instalacion" class="text-black">
+                      Instalacion de Sistemas
+                    </option>
+                    <option value="Personalizacion" class="text-black">
+                      Personalizacion de interfaz
+                    </option>
+                    <option value="Activacion" class="text-black">
+                      Activacion de producto
+                    </option>
+                  </select>
+                </div>
+                <div class="mb-2">
+                  <label for="name" class="text-lg md:text-2xl">Nombre:</label>
+                  <br />
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Nombre del solicitante / Solo letras"
+                    class="min-w-full h-8 md:h-12 px-4 md:pl-4 text-sm border-2 border-gray-300 rounded-xl placeholder:text-gray-400"
+                  />
+                </div>
+                <div class="mb-2">
+                  <label for="email" class="text-lg md:text-2xl"
+                    >Correo Electronico:</label
+                  >
+                  <br />
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Correo del solicitante"
+                    class="min-w-full h-8 md:h-12 px-4 md:pl-4 text-sm border-2 border-gray-300 rounded-xl placeholder:text-gray-400"
+                  />
+                </div>
+                <div class="mb-2">
+                  <label for="message" class="text-lg md:text-2xl"
+                    >Descripcion de la solicitud:</label
+                  >
+                  <br />
+                  <input
+                    type="text"
+                    name="message"
+                    id="message"
+                    placeholder="Describa su solicitud / Solo letras"
+                    class="min-w-full h-14 md:h-20 px-4 md:pl-4 text-sm border-2 border-gray-300 rounded-xl placeholder:text-gray-400"
+                  />
+                </div>
+
+                <div class="text-center p-4 flex justify-evenly">
+                  <input
+                    type="submit"
+                    id="button"
+                    value="Enviar"
+                    class="bg-blue-600 py-2 px-4 md:px-8 md:py-4 text-lg rounded-xl"
+                  />
+                  <input
+                    type="reset"
+                    value="Limpiar"
+                    class="bg-blue-600 py-2 px-4 md:px-8 md:py-4 text-lg rounded-xl"
+                  />
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+          ></script>
+
+          <script type="text/javascript">
+            emailjs.init("K-Lx6_ph766y05Rwo");
+          </script>
+        </article>
+      </section>
+      <section>
+        <header>
+          <div class="flex flex-col justify-center items-center relative">
+            <img
+              src="../../assets/images/banner-about.avif"
+              alt="banner"
+              class="brightness-50 w-full"
+            />
+            <h2
+              class="absolute bottom-[40%] sm:bottom-[50%] text-xl sm:text-2xl text-center font-bold reveal-btitle"
+            >
+              Acerca de InstallerOS
+            </h2>
+            <p
+              class="absolute bottom-[15%] sm:bottom-[40%] text-center text-xs font-medium reveal-bparagraph"
+            >
+              Conoce mas sobre nosotros y el como surgio la idea.
+            </p>
+          </div>
+        </header>
+        <article>
+          <h2
+            class="text-center m-4 text-xl md:text-3xl font-medium reveal-title"
+          >
+            Conoce mas de <strong>InstallerOS</strong>!
+          </h2>
+          <div
+            class="flex flex-col md:flex-row justify-center items-center md:px-8 bg-gray-950 my-6 mx-4 rounded-2xl border-gray-800 border-2 reveal"
+          >
+            <p class="text-center p-6 text-xl">
+              Nos presentamos como un emprendimiento dispuesto a cubrir las
+              necesidades del usuario y garantizar la calidad y seguridad de
+              nuestros servicios. Puedes encontrar mas informacion sobre
+              nosotros en este apartado.
+            </p>
+          </div>
+          <h2 class="text-center m-4 text-xl md:text-3xl font-medium reveal">
+            Redes Sociales
+          </h2>
+          <div class="flex justify-evenly items-center p-6 text-center reveal">
+            <div>
+              <a href="#" class="text-xl font-medium"
+                ><i
+                  class="fa-brands fa-whatsapp text-7xl text-green-400 hover:scale-110 transition-all mb-4"
+                ></i
+                ><br />WhatsApp</a
+              >
+            </div>
+            <div>
+              <a href="#" class="text-xl font-medium"
+                ><i
+                  class="fa-brands fa-facebook text-7xl text-blue-700 hover:scale-110 transition-all mb-4"
+                ></i
+                ><br />Facebook</a
+              >
+            </div>
+            <div>
+              <a href="#" class="text-xl font-medium"
+                ><i
+                  class="fa-brands fa-instagram text-7xl text-purple-500 hover:scale-110 transition-all mb-4"
+                ></i
+                ><br />Instagram</a
+              >
+            </div>
+          </div>
+        </article>
       </section>
     </main>
 
     <footer class="p-4 bg-gray-950 text-gray-500 text-center">
       <h2 class="text-center text-2xl font-medium p-2">InstallerOS</h2>
-      <div
-        class="grid grid-cols-1 md:grid-cols-4 justify-items-center gap-4 md:gap-2 md:py-8"
-      >
-        <a href="#" class="hover:text-white transition-all">Volver Arriba</a>
-        <a href="src/pages/service.html" class="hover:text-white transition-all"
-          >Servicios</a
-        >
-        <a href="src/pages/contact.html" class="hover:text-white transition-all"
-          >Contacto</a
-        >
-        <a href="src/pages/about.html" class="hover:text-white transition-all"
-          >Acerca de</a
-        >
-      </div>
       <p class="p-2">
         <small> &copy; InstallerOS - Todos los derechos reservados 2025 </small>
       </p>
